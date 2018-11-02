@@ -1,0 +1,53 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="navbar-header">
+      <img style="max-height:50px;"src="http://www.werereallygood.com/images/logo-negativo-we.png">
+    </div>
+  </div>
+  <div class="row">
+    <div class="collapse navbar-collapse">
+
+      <ul class="nav navbar-nav" >
+          <li  *ngFor=" let item of menu | keyvalue " class="dropdown" dropHotspot>
+              <a  class="dropdown-toggle" role="button" >{{item.value['category']}} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let obj of item.value | keyvalue">
+                  <a>{{obj.value['category']}}</a>
+                </li>
+              </ul>
+          </li>
+      </ul>
+
+     
+      <ul class="nav navbar-nav">
+          <li  class="dropdown" dropHotspot>
+              <a  class="dropdown-toggle" role="button" >Prod <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a [routerLink]="'/store/grid'">Grid</a></li>
+                <li><a routerLink="/store/search">Search</a></li>
+                <li><a routerLink="/store/home">Home</a></li>
+              </ul>
+            </li>
+            <li  class="dropdown" dropHotspot>
+                <a class="dropdown-toggle" role="button" >DB Tests <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a (click)="navGenClick();">DBNav</a></li>
+                  <li><a (click)="prodGenClick();">DBProd</a></li>
+                  <li><a routerLink="">Login</a></li>
+                </ul>
+              </li>
+        </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" dropHotspot>
+          <a class="dropdown-toggle" role="button">Account<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/dash/">Register</a></li>
+            <li><a href="/dash/">Login</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</nav>

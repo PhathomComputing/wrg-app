@@ -1,0 +1,13 @@
+
+<div class="row body-container">
+        <div class="col-lg-2 col-md-3 col-xs-12 search-dash">
+                <app-wrg-search></app-wrg-search>
+        </div>
+    <div class="col-lg-10 col-md-9 col-xs-12">
+               <app-wrg-grid-item 
+                        *ngFor="let product of productServ.productSet"
+                        [product]="product"></app-wrg-grid-item>
+               
+                
+    </div>
+</div>

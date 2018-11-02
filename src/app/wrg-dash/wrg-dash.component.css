@@ -1,0 +1,17 @@
+.short-nav {
+    width:50%;
+    margin-left:25%;
+}
+
+.sidebar {
+    background-color:#101010;
+    border-radius: 0px 10px 10px 0px  ;
+    height:80%;
+}
+
+html {
+    width:100%;
+    width:100vw;
+    height:100%;
+    height:100vh;
+}
